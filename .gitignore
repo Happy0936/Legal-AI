@@ -1,0 +1,11 @@
+# Python
+myenv/
+__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store

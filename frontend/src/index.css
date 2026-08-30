@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 0%;   /* Black */
+    --primary: 240 100% 50%; /* Blue */
+    --primary-foreground: 0 0% 100%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+  }
+  
+  .dark {
+    --background: 0 0% 10%; /* Dark gray */
+    --foreground: 0 0% 100%; /* White */
+    --primary: 240 100% 60%;
+    --primary-foreground: 0 0% 10%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+  }
+  
+}
+
+.large-icon {
+  font-size: 6rem;
+}
