@@ -1,11 +1,17 @@
-# Python
-myenv/
+# Python / Django
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+db.sqlite3
+staticfiles/
+media/
+.env
+venv/
+env/
 
-# Node
-frontend/node_modules/
-npm-debug.log*
-
-# OS
+# React / Node
+node_modules/
+dist/
+build/
+.vite/
 .DS_Store

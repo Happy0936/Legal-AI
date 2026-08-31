@@ -36,4 +36,5 @@ urlpatterns = [
     path('deleteQuestion', deleteQuestion, name='delete_question'),
     path('getUserAnswers', getUserAnswers, name='get_user_answers'),
     path('deleteAnswer', deleteAnswer, name='delete_answer'),
-path('semantic-search/', views.semantic_legal_search, name='semantic_search'),path('chat/', views.ai_chat_assistant, name='ai_chat')]
+path('semantic-search/', views.semantic_legal_search, name='semantic_search'),
+path('chat/', views.ai_chat_assistant, name='ai_chat')]

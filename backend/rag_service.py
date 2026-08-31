@@ -81,7 +81,7 @@ def perform_rag_search(user_query):
     context_str = "\n\n".join(doc.page_content for doc in top_docs)
 
     llm = ChatGroq(
-        groq_api_key=GROQ_KEY, 
+        groq_api_key=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, 
         model_name="llama-3.3-70b-versatile", 
         temperature=0.2
     )
@@ -117,7 +117,7 @@ def perform_conversational_chat(chat_history):
             context_str = "No specific IPC section found for this query."
 
         llm = ChatGroq(
-            groq_api_key=GROQ_KEY, 
+            groq_api_key=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, 
             model_name="llama-3.3-70b-versatile", 
             temperature=0.3
         )

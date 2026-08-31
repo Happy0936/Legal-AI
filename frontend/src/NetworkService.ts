@@ -1,16 +1,14 @@
 import Cookies from 'js-cookie';
 
 class NetworkService {
-  // ...existing code...
-  
   request(url: string, method: string, body: any, headers: any, callback: (error: any, responseData: any) => void) {
     const token = Cookies.get('authToken');
     const fetchOptions: RequestInit = {
       method,
       headers: {
         'Content-Type': 'application/json',
-        ...token && { 'Authorization': `Token ${token}` },
-        ...headers,  // Merge additional headers
+        ...(token && { 'Authorization': `Token ${token}` }),
+        ...headers,
       },
     };
 
@@ -18,24 +16,22 @@ class NetworkService {
       fetchOptions.body = JSON.stringify(body);
     }
 
-    
-   const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    let BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
-if (!BASE_URL) {
-  throw new Error("VITE_API_BASE_URL is not defined");
-}
-    
+    // Clean slashes to avoid trailing double slash bug (e.g., http://127.0.0.1:8000//ai-chat/)
+    BASE_URL = BASE_URL.replace(/\/+$/, '');
+    const cleanUrl = url.replace(/^\/+/, '');
 
-    fetch(`${BASE_URL}/${url}`, fetchOptions)
-      
-    .then(response => {
-      if (!response.ok) {
-        return response.json().then(err => { throw err });
-      }
-      return response.json();
-    })
-    .then(data => callback(null, data))
-    .catch(error => callback(error, null));
+    fetch(`${BASE_URL}/${cleanUrl}`, fetchOptions)
+      .then(async (response) => {
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({ message: `HTTP Error ${response.status}` }));
+          throw errData;
+        }
+        return response.json();
+      })
+      .then((data) => callback(null, data))
+      .catch((error) => callback(error, null));
   }
 }
 
