@@ -91,6 +91,7 @@ Before starting, ensure the following are installed on your system:
 ---
 
 ## **Project Structure**
+```text
 Legal_aid/
 ├── backend/
 │   ├── backend/           # Django project configuration & settings
@@ -106,6 +107,7 @@ Legal_aid/
     │   ├── NetworkService.ts # Unified API fetch module
     │   └── main.tsx       # Vite entry point
     └── package.json       # Node dependencies & environment scripts
+```
 
 ---
 
