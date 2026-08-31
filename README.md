@@ -20,6 +20,11 @@ Legal Aid is a platform designed to make the Indian legal system easy to underst
 
 ## Features
 
+### AI Legal Chatbot (RAG-Powered)
+- **Interactive Legal Queries:**: Converse with an AI assistant trained to interpret complex Indian laws..
+- **Smart IPC Explanations**: Ask for explanations on any IPC section (e.g., IPC 140, IPC 302) and receive structured, easy-to-understand breakdowns.
+- **- **Smart IPC Explanations**: Ask for explanations on any IPC section (e.g., IPC 140, IPC 302) and receive structured, easy-to-understand breakdowns**: Maintains real-time chat context with intelligent fallbacks and multi-turn message capabilities.
+
 ### Legal Advice/QAs
 - **Trusted Information**: Get accurate answers based on real laws in India.
 - **Comprehensive Database**: Access a rich repository of legal questions and answers.
@@ -51,7 +56,8 @@ Legal Aid is a platform designed to make the Indian legal system easy to underst
 
 ## Tech Stack
 - **Frontend**: React + TypeScript + Vite + Tailwind CSS.
-- **Backend**: Django + Django REST Framework.
+- **Backend**: Python 3.8+ + Django + Django REST Framework + Django CORS Headers.
+- **Database**: Groq API (LLaMA 3.3 70B Versatile) + LangChain + FAISS Vector Indexing.
 - **Database**: SQLite.
 - **Deployment**:
   - Frontend → Vercel
