@@ -90,6 +90,25 @@ Before starting, ensure the following are installed on your system:
 
 ---
 
+## **Project Structure**
+Legal_aid/
+├── backend/
+│   ├── backend/           # Django project configuration & settings
+│   ├── ipc/               # Core legal & IPC database app (views, models, urls)
+│   ├── rag_service.py     # RAG pipeline & LLM Integration engine
+│   ├── manage.py          # Django administrative utility
+│   └── requirements.txt   # Backend Python dependencies
+└── frontend/
+    ├── src/
+    │   ├── components/    # Reusable UI component library (Shadcn/UI)
+    │   ├── pages/         # Application view pages (AIChatPage, Home, Learn, etc.)
+    │   ├── App.tsx        # Application root routing & layout
+    │   ├── NetworkService.ts # Unified API fetch module
+    │   └── main.tsx       # Vite entry point
+    └── package.json       # Node dependencies & environment scripts
+
+---
+
 ## **Clone the Repository**  
    Clone the repository:
    ```bash
