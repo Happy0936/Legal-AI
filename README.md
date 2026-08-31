@@ -115,10 +115,25 @@ pip install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
+Install Dependencies
+```bash
+pip install -r requirements.txt
+pip install django-cors-headers groq faiss-cpu langchain-community sentence-transformers python-dotenv
+```
+Environment Configuration
+```bash
+SECRET_KEY=your_django_secret_key
+DEBUG=True
+GROQ_API_KEY=your_groq_api_key_here
+```
+Database Migrations
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 Now run the server
 ```bash
 python3 manage.py runserver
 ```
-
 
 
