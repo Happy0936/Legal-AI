@@ -5,7 +5,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-temp-key-1234567890"
 
 DEBUG = False
-ALLOWED_HOSTS = ["legal-aid-apgl.onrender.com", "localhost", "127.0.0.1"]
+
+ALLOWED_HOSTS = [
+    "legal-ai-1-q12d.onrender.com",
+    "legal-aid-apgl.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 DATABASES = {
     'default': {
