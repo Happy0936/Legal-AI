@@ -1,40 +1,23 @@
-"""
-URL configuration for backend project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path, include
-from .views import test_api
-from .views import *
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("test/", test_api),
-    path('getall', getAll),
-    path('search', search),
-    path('getQuestions', getQuestions),
-    path('addQuestion', addQuestion),
-    path('question/<int:question_id>/', getQuestionDetails),
-    path('addAnswer', addAnswer),
-    path('register', register),
-    path('login', login),
-    path('vote/', vote),
+    path('test/', views.test_api, name='test_api'),
+    path('getall/', views.getAll, name='get_all'),
+    path('search/', views.search, name='search'),
+    path('getQuestions/', views.getQuestions, name='get_questions'),
+    path('addQuestion/', views.addQuestion, name='add_question'),
+    path('question/<int:question_id>/', views.getQuestionDetails, name='get_question_details'),
+    path('addAnswer/', views.addAnswer, name='add_answer'),
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('vote/', views.vote, name='vote'),
     path('ai-chat/', views.ai_chat_assistant, name='ai_chat_assistant'),
-    path('getUserQuestions', getUserQuestions, name='get_user_questions'),
-    path('deleteQuestion', deleteQuestion, name='delete_question'),
-    path('getUserAnswers', getUserAnswers, name='get_user_answers'),
-    path('deleteAnswer', deleteAnswer, name='delete_answer'),
-path('semantic-search/', views.semantic_legal_search, name='semantic_search'),
-path('chat/', views.ai_chat_assistant, name='ai_chat')]
+    path('getUserQuestions/', views.getUserQuestions, name='get_user_questions'),
+    path('deleteQuestion/', views.deleteQuestion, name='delete_question'),
+    path('getUserAnswers/', views.getUserAnswers, name='get_user_answers'),
+    path('deleteAnswer/', views.deleteAnswer, name='delete_answer'),
+    path('semantic-search/', views.semantic_search_api, name='semantic_search'),
+    path('chat/', views.ai_chat_assistant, name='ai_chat_alias'),
+    path('diagnostics/', views.system_diagnostics, name='diagnostics'),
+]
