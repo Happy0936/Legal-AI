@@ -24,7 +24,7 @@ const items = [
     icon: Search,
   },
   {
-  title: "AI Chat",
+  title: "Legal AI Chat",
   url: "/ai-chat",
   icon: Bot,
 },

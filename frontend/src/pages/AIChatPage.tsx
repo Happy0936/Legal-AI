@@ -10,7 +10,7 @@ interface Message {
 
 export function AIChatPage() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Namaste! Main aapka AI Legal Assistant hoon. Aap Mujhse koi bhi kanooni sawal pooch sakte hain.' }
+    { role: 'assistant', content: 'Hello! 👋 I’m your AI Legal Assistant. Ask me anything about legal matters.' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
