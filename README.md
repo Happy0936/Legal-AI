@@ -10,10 +10,10 @@ Legal Aid is an intelligent, accessible platform designed to simplify the Indian
 👉 https://legal-aicom.vercel.app/
 
 🔹 **Backend API (Render)**  
-👉 https://legal-aid-apgl.onrender.com  
+👉 
 
 🔹 **Admin Panel**  
-👉 https://legal-aid-apgl.onrender.com/admin/
+👉 
 
 
 ---
