@@ -40,9 +40,9 @@ typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
 python-dotenv==1.0.1
-langchain_community
-langchain_huggingface
 langchain
 langchain-community
+langchain_huggingface
 faiss-cpu
+langchain-groq
 dotenv
