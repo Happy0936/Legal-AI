@@ -1,4 +1,4 @@
-```python
+
 import os
 import re
 import logging
@@ -487,4 +487,3 @@ def perform_conversational_chat(chat_history):
             "server error while processing your request. "
             "Please try again in a moment."
         )
-```
