@@ -1,4 +1,4 @@
-# Welcome to Legal Aid
+# Welcome to Legal Aid AI
 
 Legal Aid is an intelligent, accessible platform designed to simplify the Indian legal system for everyone. Powered by Retrieval-Augmented Generation (RAG) and LLM architecture, it offers real-time legal Q&A, comprehensive IPC section exploration, and an interactive AI Assistant to guide users through their legal queries seamlessly.
 
